@@ -51,5 +51,6 @@ import Item from './tabbarItem'
 	 	align-items: center;
 	 	position: fixed;
 	 	bottom: 0;
+	 	background: #fff;
 	 }
 </style>
