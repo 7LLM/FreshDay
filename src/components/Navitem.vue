@@ -143,6 +143,7 @@
 
 <style lang="less">
 	.nav {
+		text-align: center;
 		line-height: 50/75rem;
 		display: flex;
 		background: #fff;

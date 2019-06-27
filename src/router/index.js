@@ -5,6 +5,8 @@ import Classify from '@/pages/classify/classify'
 import Finder from '@/pages/finder/finder'
 import Shoppcar from '@/pages/shoppcar/shoppcar'
 import Mine from '@/pages/mine/mine'
+import Login from '@/pages/mine/login'
+import Order from '@/pages/mine/order'
 import Hot from '@/pages/home/hot'
 import Try from '@/pages/home/try'
 import Priority from '@/pages/home/priority'
@@ -83,6 +85,16 @@ export default new Router({
 			path: '/mine',
 			name: 'mine',
 			component: Mine
-		}
+		},
+		{
+	      path: '/login',
+	      name: 'login',
+	      component: Login
+	    },
+	    {
+	      path: '/order',
+	      name: 'order',
+	      component: Order
+	    }
 	]
 })
