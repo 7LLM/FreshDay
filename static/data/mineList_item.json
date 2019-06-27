@@ -1,10 +1,10 @@
 {
 	"list":[
-		{"list_item":"我的订单"},
-		{"list_item":"我的地址"},
-		{"list_item":"账户与安全"},
-		{"list_item":"客户与帮助"},
-		{"list_item":"意见反馈"},
-		{"list_item":"关于我们"}
+		{"list_item":"我的订单","to":"/order"},
+		{"list_item":"我的地址","to":"#"},
+		{"list_item":"账户与安全","to":"#"},
+		{"list_item":"客户与帮助","to":"#"},
+		{"list_item":"意见反馈","to":"#"},
+		{"list_item":"关于我们","to":"#"}
 	]
 }

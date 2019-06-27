@@ -4,13 +4,15 @@
 		<div>
 			<router-view></router-view>
 		</div>
+		<Tabbar inactive="0"></Tabbar>
 	</div>
 </template>
 <script>
+	import Tabbar from '../../components/tabbar'
 	import Header from '../../components/header'
 	export default{
 		components: {
-			Header
+			Header,Tabbar
 		}
 	}
 </script>

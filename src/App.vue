@@ -1,20 +1,20 @@
 <template>
   <div id="app">
 		<!-- <navItem></navItem> -->
-		<Tabbar></Tabbar>
+		<!--<Tabbar></Tabbar>-->
     <router-view/>
   </div>
 </template>
 
 <script>
- import Tabbar from './components/tabbar'
+// import Tabbar from './components/tabbar'
 // import Header from './components/header'
 import {obj} from '../static/js/utill.js'
 // import navItem from './components/Navitem'
 export default {
   name: 'App',
   components:{
-  	Tabbar
+//	Tabbar
 		// navItem
   },
 	mounted(){

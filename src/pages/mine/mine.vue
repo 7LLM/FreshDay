@@ -57,8 +57,8 @@
 		<section class="list">
 			<ul>
 				<li v-for="(item,index) in list">
-					<a href="#">{{item.list_item}}</a>
-					<!--<router-link to="/order">{{item.list_item}}</router-link>-->
+					<!--<a href="#">{{item.list_item}}</a>-->
+					<router-link :to="item.to">{{item.list_item}}</router-link>
 				</li>
 			</ul>
 		</section>
@@ -84,9 +84,11 @@
 				</a></li>
 			</ul>
 		</section>-->
+		<Tabbar inactive="4"></Tabbar>
 	</div>
 </template>	
 <script>
+	import Tabbar from '../../components/tabbar'
 	export default{
 		data(){
 			return{
@@ -98,7 +100,7 @@
 			}
 		},
 		components:{
-		  	
+		  	Tabbar
 		 },
 		mounted(){
 			this.$axios.get("../../../static/data/mineList_item.json")
