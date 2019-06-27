@@ -1,15 +1,19 @@
 <template>
-	<div id="">
-		<h1>home</h1>
+	<div id="homewarp">
+	<Header></Header>
+		<div>
+			<router-view></router-view>
+		</div>
 	</div>
-</template>	
+</template>
 <script>
+	import Header from '../../components/header'
 	export default{
-		components:{
-		  	
-		 }
+		components: {
+			Header
+		}
 	}
 </script>
-<style lang="less">
+<style>
 	
 </style>
