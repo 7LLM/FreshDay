@@ -55,14 +55,27 @@
 				}
 			}
 			.price{
+				height: 70/75rem;
+				display: flex;
+				margin-top: 20/75rem;
 				span{
 					font-size:12px;
+					line-height:70/75rem;
 					&:nth-of-type(2){
 						text-decoration: line-through;
 					}
 				}
-				
+				>p{
+					width: 70/75rem;
+					line-height:70/75rem;
+					margin-left: 130/75rem;
+					>img{
+						width: 100%;
+					}
+				}
 			}
+				
+			
 		}
 	}
 </style>

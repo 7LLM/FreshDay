@@ -5,10 +5,10 @@
 				<img src="https://j-image.missfresh.cn/img_20161108170831264.png?mryxw=165&mryxh=42" alt="">			
 			</div>
 			<div class="hd_Adress">
-				<span>南山政府大楼</span>
+				<router-link to="/address">南山政府大楼</router-link>
 			</div>
 			<div class="hd_Form">
-				<p><input type="text" placeholder="搜索"></p>
+				<router-link to="/seach"><input type="text" placeholder="搜索"></router-link>
 			</div>
 		</div>
 		<navItem></navItem>
@@ -62,14 +62,18 @@
 						background: url(../assets/logo/down.png)no-repeat center;
 						background-size: 15/75rem auto;
 					}
+					a{
+						color: #555;
+					}
 				}
 				&.hd_Form{
 					height: 100%;
 					margin-top: 5/75rem;
 					padding: 10/75rem 0;
-					>p{
+					>a{
+						display: block;
 						border: 1px solid #ccc; 
-						height: 40/75rem;
+						height: 35/75rem;
 						padding: 0 10/75rem;
 						background: #F5F5F5;
 						border-radius: 20px;
@@ -91,9 +95,9 @@
 								height: 35/75rem;
 								position: absolute;
 								left: 7/75rem;
-								top:2/75rem;
+								top:0;
 								background: url(../assets/logo/seach.png)no-repeat center;
-					      	    background-size: 35/75rem auto;
+					      	    background-size: 30/75rem auto;
 							}
 					}
 				}

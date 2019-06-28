@@ -1,9 +1,18 @@
 <template>
 	<div>
 		<div class="he_user">
-			<a href="#">优先严选</a>
-			<a href="#">安心检测</a>
-			<a href="#">赔付保障</a>
+			<a href="#">
+				<img src="https://j-image.missfresh.cn/img_20170627185311186.png" alt="">
+				<em>优先严选</em>
+				</a>
+			<a href="#">
+				<img src="https://j-image.missfresh.cn/img_20170627184654084.png" alt="">
+				<em>安心检测</em>
+			</a>
+			<a href="#">
+				<img src="https://j-image.missfresh.cn/img_20170718194948016.png" alt="">
+				<em>赔付保障</em>
+			</a>
 		</div>
 		<div class="nav_List">
 			<a href="#" v-for="(item,index) in arr1">
@@ -32,7 +41,10 @@
 					<a href="#">新人专享</a>
 					<a href="#">{{item.item_tag}}</a>
 				</p>
-				<p class="price"><span>￥{{item.newprice}}</span><span>￥{{item.oldprice}}</span></p>
+				<div class="price">
+					<span>￥{{item.newprice}}</span><span>￥{{item.oldprice}}</span>
+				    <p><img src="https://j-image.missfresh.cn/img_20170425134548759.png"></p>
+				</div>
 			</div>
 		</AllItem>
 	</div>
@@ -86,28 +98,34 @@
 		},
 		mounted() {
 			this.getval();
-		}
+		},
+	
 	}
 </script>
 <style lang="less">
 	#homewarp {
 		margin-top: 60/75rem;
-
-		
 	}
 
 	.he_user {
 		display: flex;
 		padding: 0 20/75rem;
 		flex: 1;
+		text-align: center;
 		margin-top: 120/75rem;
 		border-bottom: 1px solid #f2f2f2;
-
 		>a {
 			color: #555;
 			width: 33.33333%;
 			font-size: 18/75rem;
 			padding: 25/75rem 0;
+			>img{
+				width: 25/75rem;
+			}
+			>em{
+				font-style: normal;
+				vertical-align: 5px;
+			}
 		}
 	}
 
@@ -115,13 +133,12 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: ceter;
-
+        text-align: center;
 		>a {
 			width: 100%;
 			height: 100%;
 			padding: 20/75rem 0;
 			display: block;
-
 			>img {
 				width: 60/75rem;
 			}

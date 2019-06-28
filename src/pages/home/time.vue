@@ -1,26 +1,7 @@
 <template>
 	<div>
-		<Header></Header>
-		<div class="he_user">
-			<a href="#">优先严选</a>
-			<a href="#">安心检测</a>
-			<a href="#">赔付保障</a>
-		</div>
-		<div class="nav_List">
-			<a href="#" v-for="(item,index) in arr1">
-				<img :src="item.img_url" alt="">
-				<p>{{item.des}}</p>
-			</a>
-		</div>
-		<div class="new_Prer">
-			<a href="#">
-				<img src="https://j-image.missfresh.cn/img_20190115153812265.png" alt="">
-			</a>
-			<a href="#">
-				<img src="https://j-image.missfresh.cn/img_20190115153756830.png" alt="">
-			</a>
-		</div>
 		<div class="banner_Img">
+			<img src="https://j-image.missfresh.cn/img_20190111010717056.jpg?iopcmd=thumbnail&type=4&width=640" alt="">
 			<img src="https://j-image.missfresh.cn/mis_img_20190226141252067.jpg?mryxw=750&mryxh=142" alt="">
 		</div>
 		
@@ -33,16 +14,17 @@
 					<a href="#">新人专享</a>
 					<a href="#">{{item.item_tag}}</a>
 				</p>
-				<p class="price"><span>￥{{item.newprice}}</span><span>￥{{item.oldprice}}</span></p>
+				<div class="price">
+					<span>￥{{item.newprice}}</span><span>￥{{item.oldprice}}</span>
+				    <p><img src="https://j-image.missfresh.cn/img_20170425134548759.png"></p>
+				</div>
 			</div>
 		</AllItem>
-		<Tabbar></Tabbar>
 	</div>
 </template>
 <script>
 	import AllItem from '../../components/Allitem'
-	import Header from '../../components/header'
-	import Tabbar from '../../components/tabbar'
+	import navItem from '../../components/Navitem'
 	export default {
 		data() {
 			return {
@@ -72,7 +54,7 @@
 			}
 		},
 		components: {
-			AllItem,Header,Tabbar
+			AllItem,navItem
 		},
 		methods: {
 			
@@ -95,7 +77,10 @@
 <style lang="less">
 	#homewarp {
 		margin-top: 60/75rem;
+
+		
 	}
+
 	.he_user {
 		display: flex;
 		padding: 0 20/75rem;
@@ -153,10 +138,11 @@
 
 	.banner_Img {
 		width: 100%;
-
+		margin-top: 120/75rem;
 		img {
 			width: 100%;
 		}
 	}
+	
 </style>
 

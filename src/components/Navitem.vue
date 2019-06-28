@@ -137,6 +137,10 @@
 				this.arr[index].ishow=index;
 				this.$router.push("/"+this.arr[index].dizhi)
 			}
+		},
+		beforeCreate:function(){
+			// console.log(111)
+			this.$router.push("/home/hot")
 		}
 	}
 </script>
@@ -153,6 +157,9 @@
 			display: flex;
 			overflow: scroll;
 			flex-wrap: nowrap;
+			&::-webkit-scrollbar {          
+                display: none;
+				}
 			>li {
 				width: 100/75rem;
 				margin: 0 20/75rem;

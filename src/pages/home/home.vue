@@ -3,19 +3,19 @@
 	<Header></Header>
 		<div>
 			<router-view></router-view>
+			<Tabbar inactive="0"></Tabbar>
 		</div>
-		<Tabbar inactive="0"></Tabbar>
 	</div>
 </template>
 <script>
-	import Tabbar from '../../components/tabbar'
 	import Header from '../../components/header'
+	import Tabbar from '../../components/tabbar'
 	export default{
 		components: {
 			Header,Tabbar
 		}
 	}
 </script>
-<style>
+<style lang="less">
 	
 </style>

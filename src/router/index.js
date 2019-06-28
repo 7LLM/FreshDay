@@ -29,6 +29,8 @@ import Crayfish from '@/pages/home/crayfish'
 import Shop from '@/pages/home/shop'
 import Big from '@/pages/home/big'
 import Supermarket from '@/pages/home/supermarket'
+import Address from '@/components/address'
+import Seach from '@/components/seach'
 Vue.use(Router)
 
 export default new Router({
@@ -42,28 +44,28 @@ export default new Router({
 			name: 'home',
 			component: Home,
 			children: [
-				{path: '/hot',name: 'hot',component: Hot},
-				{path: '/try',name: 'try',component: Try},
-				{path: '/priority',name: 'priority',component: Priority},
-				{path: '/member',name: 'member',component: Member},
-				{path: '/fruits',name: 'fruits',component: Fruits},
-				{path: '/vegetables',name: 'vegetables',component: Vegetables},
-				{path: '/egg',name: 'egg',component: Egg},
-				{path: '/seafood',name: 'seafood',component: Seafood},
-				{path: '/dairy',name: 'dairy',component: Dairy},
-				{path: '/snack',name: 'snack',component: Snack},
-				{path: '/cooked',name: 'cooked',component: Cooked},
-				{path: '/drinks',name: 'drinks',component: Drinks},
-				{path: '/baking',name: 'baking',component: Baking},
-				{path: '/grain',name: 'grain',component: Grain},
-				{path: '/fastfood',name: 'fastfood',component: Fastfood},
-				{path: '/clean',name: 'clean',component: Clean},
-				{path: '/makeup',name: 'makeup',component: Makeup},
-				{path: '/crayfish',name: 'crayfish',component: Crayfish},
-				{path: '/shop',name: 'shop',component: Shop},
-				{path: '/big',name: 'big',component: Big},
-				{path: '/supermarket',name: 'supermarket',component: Supermarket},
-				{path: '/time',name: 'time',component: Time}
+				{path: 'hot',name: 'hot',component: Hot},
+				{path: 'try',name: 'try',component: Try},
+				{path: 'priority',name: 'priority',component: Priority},
+				{path: 'member',name: 'member',component: Member},
+				{path: 'fruits',name: 'fruits',component: Fruits},
+				{path: 'vegetables',name: 'vegetables',component: Vegetables},
+				{path: 'egg',name: 'egg',component: Egg},
+				{path: 'seafood',name: 'seafood',component: Seafood},
+				{path: 'dairy',name: 'dairy',component: Dairy},
+				{path: 'snack',name: 'snack',component: Snack},
+				{path: 'cooked',name: 'cooked',component: Cooked},
+				{path: 'drinks',name: 'drinks',component: Drinks},
+				{path: 'baking',name: 'baking',component: Baking},
+				{path: 'grain',name: 'grain',component: Grain},
+				{path: 'fastfood',name: 'fastfood',component: Fastfood},
+				{path: 'clean',name: 'clean',component: Clean},
+				{path: 'makeup',name: 'makeup',component: Makeup},
+				{path: 'crayfish',name: 'crayfish',component: Crayfish},
+				{path: 'shop',name: 'shop',component: Shop},
+				{path: 'big',name: 'big',component: Big},
+				{path: 'supermarket',name: 'supermarket',component: Supermarket},
+				{path: 'time',name: 'time',component: Time}
 				]
 		},
 		{
@@ -95,6 +97,16 @@ export default new Router({
 	      path: '/order',
 	      name: 'order',
 	      component: Order
+	    },
+		{
+	      path: '/address',
+	      name: 'address',
+	      component: Address
+	    },
+	    {
+	      path: '/seach',
+	      name: 'seach',
+	      component: Seach
 	    }
 	]
 })
