@@ -135,7 +135,7 @@
 					this.arr[i].ishow=-1;
 				}
 				this.arr[index].ishow=index;
-				this.$router.push("/"+this.arr[index].dizhi)
+				this.$router.push("/home/"+this.arr[index].dizhi)
 			}
 		},
 		beforeCreate:function(){
