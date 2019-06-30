@@ -15,6 +15,7 @@
 	.item{
 		display: flex;
 		text-align: left;
+		position: relative;
 		/*justify-content: space-around;*/
 		border-bottom: 1px solid #f5f5f5;
 		padding:20/75rem;
@@ -56,26 +57,32 @@
 			}
 			.price{
 				height: 70/75rem;
-				display: flex;
+				// display: flex;
+				// justify-content: space-between;
 				margin-top: 20/75rem;
 				span{
-					font-size:12px;
+					font-size:24/75rem;
 					line-height:70/75rem;
+					color: #FF4891;
 					&:nth-of-type(2){
 						text-decoration: line-through;
+						color: #969696;
+						font-size: 18/75rem;
+						margin-left: 10/75rem;
 					}
 				}
-				>p{
-					width: 70/75rem;
-					line-height:70/75rem;
-					margin-left: 130/75rem;
-					>img{
-						width: 100%;
-					}
-				}
-			}
 				
-			
+			}
+		}
+	}
+	.icon_cadd{
+		width: 80/75rem;
+		position: absolute;
+		right:2%;
+		top: 65%;
+		height:80/75rem;
+		>img{
+			width: 100%;
 		}
 	}
 </style>

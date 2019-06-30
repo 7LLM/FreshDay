@@ -30,6 +30,7 @@
 		position: fixed;
 		top: 0;
 		background: #fff;
+		z-index: 66;
 		.warp{
 			padding:0 8/75rem;
 			height:50/75rem;

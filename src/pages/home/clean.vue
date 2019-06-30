@@ -28,28 +28,6 @@
 	export default {
 		data() {
 			return {
-				
-				arr1: [{
-						des: "本周新品",
-						img_url: "https://j-image.missfresh.cn/img_20181127211810194.png"
-					},
-					{
-						des: "邀请有礼",
-						img_url: "https://j-image.missfresh.cn/img_20181127212305318.png"
-					},
-					{
-						des: "每日签到",
-						img_url: "https://j-image.missfresh.cn/img_20181127212018922.png"
-					},
-					{
-						des: "凑单专区",
-						img_url: "https://j-image.missfresh.cn/img_20181127212340988.png"
-					},
-					{
-						des: "开通会员",
-						img_url: "https://j-image.missfresh.cn/img_20181127212459157.png"
-					}
-				],
 				list: []
 			}
 		},

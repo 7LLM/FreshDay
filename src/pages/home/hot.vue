@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="maxbox">
 		<div class="he_user">
 			<a href="#">
 				<img src="https://j-image.missfresh.cn/img_20170627185311186.png" alt="">
@@ -32,21 +32,26 @@
 			<img src="https://j-image.missfresh.cn/mis_img_20190226141252067.jpg?mryxw=750&mryxh=142" alt="">
 		</div>
 		
-		<AllItem v-for="(item,index) in list" :key="index">
-			<div slot="le_Img" class="le_Img"><img :src="item.img_url" /></div>
-			<div slot="rt_Des" class="rt_Des">
-				<h3>{{item.sub_title}}</h3>
-				<p>{{item.mess_title}}</p>
-				<p class="new_user">
-					<a href="#">新人专享</a>
-					<a href="#">{{item.item_tag}}</a>
-				</p>
-				<div class="price">
-					<span>￥{{item.newprice}}</span><span>￥{{item.oldprice}}</span>
-				    <p><img src="https://j-image.missfresh.cn/img_20170425134548759.png"></p>
-				</div>
-			</div>
-		</AllItem>
+		<div v-for="(item,index) in arr" :key="index"f style="position: relative;">
+			<router-link :to="{path:'/details',query:{id:item.id}}">
+				<AllItem >
+						<div slot="le_Img" class="le_Img"><img :src="item.img_url" /></div>
+						<div slot="rt_Des" class="rt_Des">
+							<h3>{{item.produ_name}}</h3>
+							<p>{{item.produ_des}}</p>
+							<p class="new_user">
+								<a href="#">新人专享</a>
+								<!-- <a href="#">{{item.item_tag}}</a> -->
+							</p>
+							<div class="price">
+								<span>{{item.pro_price}}</span>
+								<span>￥49.9</span>
+							</div>
+						</div>
+				</AllItem>
+			</router-link> 
+			   <p class="icon_cadd"><img src="https://j-image.missfresh.cn/img_20170425134548759.png"></p>
+		</div>
 	</div>
 </template>
 <script>
@@ -55,7 +60,6 @@
 	export default {
 		data() {
 			return {
-				
 				arr1: [{
 						des: "本周新品",
 						img_url: "https://j-image.missfresh.cn/img_20181127211810194.png"
@@ -77,19 +81,22 @@
 						img_url: "https://j-image.missfresh.cn/img_20181127212459157.png"
 					}
 				],
-				list: []
+				temp:[],
+				arr:[]
 			}
 		},
 		components: {
 			AllItem,navItem
 		},
 		methods: {
-			
 			getval() {
-				this.$axios.get("../../../static/data/hot.json")
+				this.$axios.get("https://www.easy-mock.com/mock/5cfe1a35454961552714c6f9/example/datails")
 					.then(res => {
-						console.log(res.data.home_list)
-						this.list = res.data.home_list;
+						for(let item of res.data.data){
+							this.temp.push(item.id)
+						}
+						this.arr = res.data.data;
+						console.log(res.data.data)
 					})
 					.catch(err => {
 						console.log(err)
@@ -106,7 +113,9 @@
 	#homewarp {
 		margin-top: 60/75rem;
 	}
-
+    .maxbox{
+		padding-bottom: 100/75rem;
+	}
 	.he_user {
 		display: flex;
 		padding: 0 20/75rem;

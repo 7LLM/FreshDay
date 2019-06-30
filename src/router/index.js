@@ -31,6 +31,7 @@ import Big from '@/pages/home/big'
 import Supermarket from '@/pages/home/supermarket'
 import Address from '@/components/address'
 import Seach from '@/components/seach'
+import Details from '@/components/details'
 Vue.use(Router)
 
 export default new Router({
@@ -107,6 +108,11 @@ export default new Router({
 	      path: '/seach',
 	      name: 'seach',
 	      component: Seach
-	    }
+	    },
+		{
+		  path: '/details',
+		  name: 'details',
+		  component: Details
+		}
 	]
 })
