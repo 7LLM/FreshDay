@@ -50,7 +50,12 @@
 						</div>
 				</AllItem>
 			</router-link> 
-			   <p class="icon_cadd"><img src="https://j-image.missfresh.cn/img_20170425134548759.png"></p>
+				<p class="icon_cadd" @click="fn(index)" v-show="item.ishow"><img src="https://j-image.missfresh.cn/img_20170425134548759.png"></p>
+				<p class="shu" v-show="!item.ishow">
+					 <span @click="reduce(index)" style="color: #FF4891;">-</span>
+					 <input type="text" v-model="item.count">
+					 <span @click="add(index)" style="background: #FF4891;">+</span>
+				</p>
 		</div>
 	</div>
 </template>
@@ -82,7 +87,7 @@
 					}
 				],
 				temp:[],
-				arr:[]
+				arr:[],
 			}
 		},
 		components: {
@@ -101,6 +106,21 @@
 					.catch(err => {
 						console.log(err)
 					})
+			},
+			add(index){
+				console.log(111)
+				this.arr[index].count++;
+			},
+			reduce(index){
+				if(this.arr[index].count<=1){
+					this.arr[index].ishow=true;
+					return;
+				}else{
+					this.arr[index].count--;
+				}
+			},
+			fn(index){
+				  this.arr[index].ishow=!this.arr[index].ishow;
 			}
 		},
 		mounted() {

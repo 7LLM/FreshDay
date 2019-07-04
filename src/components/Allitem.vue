@@ -16,7 +16,6 @@
 		display: flex;
 		text-align: left;
 		position: relative;
-		/*justify-content: space-around;*/
 		border-bottom: 1px solid #f5f5f5;
 		padding:20/75rem;
 		.le_Img{
@@ -76,13 +75,34 @@
 		}
 	}
 	.icon_cadd{
-		width: 80/75rem;
+		width: 60/75rem;
 		position: absolute;
-		right:2%;
+		right: 3%;
 		top: 65%;
-		height:80/75rem;
+		height:60/75rem;
 		>img{
 			width: 100%;
+		}
+	}
+	.shu{
+		width:110/75rem;
+		// line-height: 30/75rem;
+		position: absolute;
+		right: 3%;
+		top: 68%;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		span{
+			width: 30/75rem;
+			border: 1px solid #FF4891;
+			border-radius: 50%;
+			color: #fff;
+		}
+		input{
+			width: 41/75rem;
+			border: none;
+			text-align: center;
 		}
 	}
 </style>
