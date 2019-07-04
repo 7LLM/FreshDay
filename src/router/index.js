@@ -2,6 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/home'
 import Classify from '@/pages/classify/classify'
+import Hot2 from '@/pages/classify/hot2'
+import Vagetable from '@/pages/classify/vagetable'
+import Menber from '@/pages/classify/menber'
+import Fruit from '@/pages/classify/fruit'
+import Fresh from '@/pages/classify/fresh'
+import Meat from '@/pages/classify/meat'
 import Finder from '@/pages/finder/finder'
 import Shoppcar from '@/pages/shoppcar/shoppcar'
 import Mine from '@/pages/mine/mine'
@@ -72,7 +78,15 @@ export default new Router({
 		{
 			path: '/classify',
 			name: 'classify',
-			component: Classify
+			component: Classify,
+			children: [
+				{path: 'hot2',name: 'hot',component: Hot2},
+				{path: 'vagetable',name: 'vagetable',component: Vagetable},
+				{path: 'menber',name: 'menber',component: Menber},
+				{path: 'fruit',name: 'fruit',component: Fruit},
+				{path: 'fresh',name: 'fresh',component: Fresh},
+				{path: 'meat',name: 'meat',component: Meat}
+			]
 		},
 		{
 			path: '/finder',

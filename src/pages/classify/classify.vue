@@ -16,6 +16,7 @@
 		</div>
 		<!--侧边导航-->
 		<Side_nav></Side_nav>
+		<router-view></router-view>
 		<!--底部-->
 		<Tabbar inactive="1"></Tabbar>
 	</div>
@@ -112,7 +113,7 @@
 	/*侧边导航*/
 	
 	.side_nav {
-		/*float: left;*/
-		margin-top: 65/75rem;
+		float: left;
+		margin-top: 60/75rem;
 	}
 </style>
